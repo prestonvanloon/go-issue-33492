@@ -5,6 +5,7 @@ Original issue: https://github.com/golang/go/issues/33492.
 Objective: Compile a rust library (without std), link it with go, and call
 that library from the go binary.
 
+Graph of dependencies for `//go:main`.
 ![How everything is linked](graph.png)
 
 To build this:
