@@ -1,0 +1,18 @@
+"""
+cargo-raze workspace build file.
+
+DO NOT EDIT! Replaced on runs of cargo-raze
+"""
+package(default_visibility = ["//visibility:public"])
+
+licenses([
+  "notice" # See individual crates for specific licenses
+])
+alias(
+    name = "alloc_cortex_m",
+    actual = "@raze__alloc_cortex_m__0_3_5//:alloc_cortex_m",
+)
+alias(
+    name = "zeroize",
+    actual = "@raze__zeroize__0_9_3//:zeroize",
+)

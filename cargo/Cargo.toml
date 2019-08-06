@@ -1,0 +1,24 @@
+[package]
+name = "prysm"
+version = "0.0.0"
+
+# Mandatory (or Cargo tooling is unhappy)
+[lib]
+path = "fake_lib.rs"
+
+[dependencies]
+zeroize = "0.9.3"
+alloc-cortex-m = "0.3.5"
+
+[raze]
+workspace_path = "//cargo"
+genmode = "Remote"
+output_buildfile_suffix = "BUILD.bazel"
+
+[raze.crates.proc-macro2.'0.4.30']
+additional_flags = ["--cfg=use_proc_macro"]
+
+[raze.crates.zeroize.'0.9.3']
+# no_std doesn't seem to propagate to zeroize, so I have manually edited the 
+# BUILD.bazel file to include crate_features = ["no_std"]. Running cargo raze
+# will overwrite this manual change and start including the standard library.

@@ -1,0 +1,26 @@
+
+load("@io_bazel_rules_rust//rust:rust.bzl", "rust_library")
+
+rust_library(
+    name = "lib",
+    srcs = [
+        "lib.rs",
+    ],
+    crate_features = [
+        "no_std",
+    ],
+    crate_type = "staticlib",
+    edition = "2018",
+    rustc_flags = [
+        # Do not unwrap panics.
+        "--codegen=panic=abort",
+        # Some compiler flags to reduce duplicate symbols.
+        "--codegen=opt-level=3",
+        "--codegen=lto=thin",
+    ],
+    deps = [
+        "//cargo:alloc_cortex_m",
+        "//third_party/amcl:amcl",
+    ],
+    visibility = ["//visibility:public"],
+)

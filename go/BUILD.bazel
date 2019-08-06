@@ -1,0 +1,24 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_binary")
+load("//tools:go_rust.bzl", "go_rust_library")
+
+go_library(
+    name = "rust_go_wrapper",
+    srcs = [
+        "hello.go",
+        "hello.s",
+    ],
+    importpath = "github.com/prysmaticlabs/prysm/shared/bls",
+    tags = ["manual"],
+)
+
+go_rust_library(
+    name = "rustgo",
+    src = ":rust_go_wrapper",
+    importpath = "github.com/prysmaticlabs/prysm/shared/bls",
+    rust_lib = "//rust:lib",
+)
+
+go_binary(
+    name = "main",
+    embed = [":rustgo"],
+)

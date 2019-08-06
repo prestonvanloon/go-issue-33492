@@ -1,0 +1,108 @@
+[[package]]
+name = "alloc-cortex-m"
+version = "0.3.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "cortex-m 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)",
+ "linked_list_allocator 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "cortex-m"
+version = "0.1.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "volatile-register 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "linked_list_allocator"
+version = "0.6.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "proc-macro2"
+version = "0.4.30"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "unicode-xid 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "prysm"
+version = "0.0.0"
+dependencies = [
+ "alloc-cortex-m 0.3.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "zeroize 0.9.3 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "quote"
+version = "0.6.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "proc-macro2 0.4.30 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "syn"
+version = "0.15.42"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "proc-macro2 0.4.30 (registry+https://github.com/rust-lang/crates.io-index)",
+ "quote 0.6.13 (registry+https://github.com/rust-lang/crates.io-index)",
+ "unicode-xid 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "synstructure"
+version = "0.10.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "proc-macro2 0.4.30 (registry+https://github.com/rust-lang/crates.io-index)",
+ "quote 0.6.13 (registry+https://github.com/rust-lang/crates.io-index)",
+ "syn 0.15.42 (registry+https://github.com/rust-lang/crates.io-index)",
+ "unicode-xid 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "unicode-xid"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "volatile-register"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "zeroize"
+version = "0.9.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "zeroize_derive 0.9.3 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "zeroize_derive"
+version = "0.9.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "proc-macro2 0.4.30 (registry+https://github.com/rust-lang/crates.io-index)",
+ "quote 0.6.13 (registry+https://github.com/rust-lang/crates.io-index)",
+ "syn 0.15.42 (registry+https://github.com/rust-lang/crates.io-index)",
+ "synstructure 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[metadata]
+"checksum alloc-cortex-m 0.3.5 (registry+https://github.com/rust-lang/crates.io-index)" = "6d5f7d01bc93ce089de636f946f7f1fdc5e5d751732367e019c9755440e7aef4"
+"checksum cortex-m 0.1.8 (registry+https://github.com/rust-lang/crates.io-index)" = "3df5de9a9829f2ccb7defa8945fa020c6614cd2f6ba9b5f33db9241dcc01985e"
+"checksum linked_list_allocator 0.6.4 (registry+https://github.com/rust-lang/crates.io-index)" = "47314ec1d29aa869ee7cb5a5be57be9b1055c56567d59c3fb6689926743e0bea"
+"checksum proc-macro2 0.4.30 (registry+https://github.com/rust-lang/crates.io-index)" = "cf3d2011ab5c909338f7887f4fc896d35932e29146c12c8d01da6b22a80ba759"
+"checksum quote 0.6.13 (registry+https://github.com/rust-lang/crates.io-index)" = "6ce23b6b870e8f94f81fb0a363d65d86675884b34a09043c81e5562f11c1f8e1"
+"checksum syn 0.15.42 (registry+https://github.com/rust-lang/crates.io-index)" = "eadc09306ca51a40555dd6fc2b415538e9e18bc9f870e47b1a524a79fe2dcf5e"
+"checksum synstructure 0.10.2 (registry+https://github.com/rust-lang/crates.io-index)" = "02353edf96d6e4dc81aea2d8490a7e9db177bf8acb0e951c24940bf866cb313f"
+"checksum unicode-xid 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)" = "fc72304796d0818e357ead4e000d19c9c174ab23dc11093ac919054d20a6a7fc"
+"checksum volatile-register 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)" = "a470889aa8f2d3ad893bd43cd90c824e63e8ac0ee5fe64c5d81a932d184fd549"
+"checksum zeroize 0.9.3 (registry+https://github.com/rust-lang/crates.io-index)" = "45af6a010d13e4cf5b54c94ba5a2b2eba5596b9e46bf5875612d332a1f2b3f86"
+"checksum zeroize_derive 0.9.3 (registry+https://github.com/rust-lang/crates.io-index)" = "080616bd0e31f36095288bb0acdf1f78ef02c2fa15527d7e993f2a6c7591643e"

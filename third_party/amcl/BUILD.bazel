@@ -1,0 +1,15 @@
+load("@io_bazel_rules_rust//rust:rust.bzl", "rust_library")
+
+rust_library(
+    name = "amcl",
+    srcs = glob(
+        ["src/**/*.rs"],
+    ),
+    crate_features = ["no_std"],
+    crate_type = "lib",
+    edition = "2015",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//cargo:zeroize",
+    ],
+)
